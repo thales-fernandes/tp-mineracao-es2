@@ -1,0 +1,22 @@
+[project]
+name = "tp-mineracao-es2"
+version = "0.1.0"
+description = "CLI para identificar arquivos prioritarios para refatoracao usando mineracao de repositorios."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lizard>=1.17.10",
+    "pydriller>=2.6",
+    "rich>=13.7.0",
+    "typer>=0.12.0",
+]
+
+[project.scripts]
+repo-miner = "repo_miner.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
